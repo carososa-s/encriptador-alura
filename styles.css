@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Inter;
+    src: url(./assets/fonts/Inter.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --light-blue-100: #f3f5fc;
+    --light-blue-200: #eff1fa;
+    --light-blue-300: #d1d9f9;
+    --light-blue-400: #aab2d5;
+    --light-blue-500: #757fb2;
+    --dark-blue-100: #609ed4;
+    --dark-blue-200: #356ea9;
+    --dark-blue-300: #0a3871;
+    --dark-blue-400: #072b61;
+    --dark-blue-500: #052051;
+    --gray-100: #ced4da;
+    --gray-200: #adb5bd;
+    --gray-300: #868e96;
+    --gray-400: #495057;
+    --gray-500: #343a40;
+
+
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color:  var(--light-blue-300);
+}
+
+.logo-alura {
+    margin: 1rem 0.5rem;
+    width: 20px;
+   
+}
+.form-encriptador {
+    display: flex;
+    justify-content: center;
+}
+.texto-encriptador {
+    margin-left: auto;
+    margin-right: auto;
+    /* border: none; */
+    background-color: var(--light-blue-300);
+    font-size: 18px;
+    font-family: Inter, sans-serif;
+    color: var(--dark-blue-300);
+    border: none;
+}
+
+.button {
+    font-family: Inter;
+    font-size: 12px;
+    background-color: #052051;
+    color: var(--light-blue-100);
+    width: 170px;
+    padding: 10px;
+    border: 1px solid var(--dark-blue-300); 
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+.desencriptar {
+    background-color: var(--light-blue-300);
+    color: var(--dark-blue-300);
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-condicion {
+display: flex;
+align-items: center;
+gap: 5px;
+margin: 1rem 0;
+}
+
+.condicion {
+    color: var(--gray-400);
+    font-size: 8px;
+    
+}
+.container-mensajes {
+    display: flex;
+    justify-content: center;
+}
+.container-mensaje {
+    background-color: var(--light-blue-100);
+    padding: 1rem 0;
+    border-radius: 12px;
+    width: 170px;
+    margin-top: 1rem;
+}
+.mensaje {
+    font-size: 10px;
+    text-align: center;
+}
+.alerta {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.bold {
+    font-weight: 900;
+}
+@media(max-width:600px) {
+    
+}
