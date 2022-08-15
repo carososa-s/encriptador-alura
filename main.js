@@ -29,7 +29,10 @@ function mostrarEncriptado() {
 
             $condicion.style.color = "red";
             $circleAlert.setAttribute("fill", "red")
-        } else {
+        } else if(textoIngresado.length === 0) {
+         $containerMensaje.load();
+        } 
+        else {
 
             $condicion.style.color = "gray";
             $circleAlert.setAttribute("fill", "#495057");
