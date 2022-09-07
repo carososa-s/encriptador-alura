@@ -8,6 +8,7 @@ let textoEncriptado;
 let textoDesencriptado;
 let textoParaCopiar;
 let $containerMensaje = document.querySelector(".container-mensajes");
+let $auxContainerMensaje = document.querySelector(".container-mensajes").innerHTML;
 let buttonCopiar = document.createElement("button");
 buttonCopiar.setAttribute("class", "button copiar");
 buttonCopiar.textContent = "Copiar";
@@ -25,13 +26,17 @@ mostrarEncriptado();
 
 function mostrarEncriptado() {
     $botonEncriptado.addEventListener("click", () => {
+
+        console.log($auxContainerMensaje)
         if (!/^[a-z0-9 ]*$/.test(textoIngresado)) {
 
             $condicion.style.color = "red";
             $circleAlert.setAttribute("fill", "red")
-        } else if(textoIngresado.length === 0) {
-         $containerMensaje.load();
-        } 
+        } else if (!textoIngresado) {
+            $containerMensaje.innerHTML = "";
+            $containerMensaje.innerHTML = $auxContainerMensaje;
+
+        }
         else {
 
             $condicion.style.color = "gray";
@@ -56,7 +61,12 @@ function mostrarDesencriptado() {
 
             $condicion.style.color = "red";
             $circleAlert.setAttribute("fill", "red")
-        } else {
+        } else if (!textoIngresado) {
+            $containerMensaje.innerHTML = "";
+            $containerMensaje.innerHTML = $auxContainerMensaje;
+
+        }
+        else {
             $condicion.style.color = "gray";
             $circleAlert.setAttribute("fill", "#495057");
             desencriptar()
